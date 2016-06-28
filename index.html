@@ -18,6 +18,9 @@
    <button id="textAppender">Append some text </button>
      
    <div id="secondDiv"> Javascript is ... </div>
+   
+        <button id="textCreator">Create some text </button>
+   <div id="emptyDiv"></div>
        <script type="text/javascript">
        // This is a comment.
      document.getElementById("textChanger").onclick =  function(){
@@ -28,6 +31,22 @@
          
      }
      
+      document.getElementById("textAppender").onclick =  function(){
+         //test
+         //ALERT THE USER ABOUT SOMETHING!
+         document.getElementById("secondDiv").innerHTML=document.getElementById("secondDiv").innerHTML + "great!";
+         
+         
+     }
+     
+     
+        document.getElementById("textCreator").onclick =  function(){
+         //test
+         //ALERT THE USER ABOUT SOMETHING!
+         document.getElementById("emptyDiv").innerHTML="<ul><li>Cat</li><li>Dog</li></ul>";
+         
+         
+     }
      </script>
     
 </body>
