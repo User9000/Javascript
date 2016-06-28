@@ -24,21 +24,25 @@
 </head>
 
 <body>
-   <button id="textChanger">Eliminate the circle</e></button>
+    <input id="myInput" type="text"  value="test"/>
+   <button id="textChanger">Change the text</e></button>
    
-   <div id="redcircle">
+   <div id="firstDiv">
+       
+       This is some text
    </div>
    
   
   <script type="text/javascript">
   
   
-     var divId= "redcircle";
+     var newText= document.getElementById("myInput").value;
        // This is a comment.
      document.getElementById("textChanger").onclick =  function(){
          //test
          //ALERT THE USER ABOUT SOMETHING!
-         document.getElementById(divId).style.display="none";
+         newText= document.getElementById("myInput").value
+         document.getElementById("firstDiv").innerHTML=newText;
          
          
      }
