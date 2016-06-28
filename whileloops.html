@@ -39,6 +39,11 @@
             } else{
                  guesses++;
              //alert("I did not get it.");
+             if (guesses > 20 )
+               {
+                   guess= true;
+                   alert("I did not got it! :/");
+               }
             }
      }
     
