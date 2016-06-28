@@ -11,15 +11,19 @@
 </head>
 
 <body>
-   <button id="myButton"> You know you want to click me </button>
+   <button id="textChanger"> Change first div text </button>
+   
+   <div id="firstdiv">This is some text</div>
+   
+   <button id="textAppender">Append some text </button>
      
-     
+   <div id="secondDiv"> Javascript is ... </div>
        <script type="text/javascript">
        // This is a comment.
-     document.getElementById("myButton").onclick =  function(){
+     document.getElementById("textChanger").onclick =  function(){
          //test
          //ALERT THE USER ABOUT SOMETHING!
-         alert("hello WORLD!");
+         document.getElementById("firstdiv").innerHTML="This is awesome";
          
          
      }
