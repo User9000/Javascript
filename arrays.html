@@ -27,27 +27,21 @@
      var myArray = new Array();
      
      myArray[0] ="pizza";
-     myArray[1] = "Chocolate"
-     
+     myArray[1] = "Chocolate";
      myOtherArray=["rain","sunshine"];
-     
-    console.log(myArray);
+     myOtherArray.push("snow");
+     myOtherArray.splice(2,0,"hail","cloudy");
+     console.log(myArray);
      console.log(myOtherArray);
-     
-     
+     console.log(myOtherArray.length);
        // This is a comment.
      document.getElementById("textChanger").onclick =  function(){
          //test
-     
+
          document.getElementById("firstDiv").innerHTML=myArray[0];
-         
-         
+
      }
-     
-   
-         
-         
-     
+
      </script>
     
 </body>
