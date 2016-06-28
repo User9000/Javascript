@@ -1,51 +1,49 @@
-
-
 <!doctype html>
 <html>
 <head>
     <title>Learning Javascript</title>
-
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
  
-    
-    
-<style type="text/css">
-  
-   
-    </style>    
 </head>
 
 <body>
 
+   <p > How many fingers are you holding up?  </p>
 
-   <p id="arrayitems"></p>
    
+   <input id="myNumber" />
+   <button id="guess">Guess! </button>
   
    
   
   <script type="text/javascript">
 
-   var myArray =["pizza", "chocolate","crisps"];
+  document.getElementById("guess").onclick = function(){
 
-   //to eliminate the undefined item at the beginning.
-   var Array1 ="";
-   var i = 0;
+    var guess = false;
+    var x;
+    var guesses=1;
+    while(guess == false){  
 
-   //while loop 
-     while (i < myArray.length)
-     {
-      Array1 = Array1 + " " +myArray[i];
-      console.log(i);
 
-      i++;
+            x = Math.random();
+            x = 6*x;
+            x = Math.floor(x);   
+
+            if(document.getElementById("myNumber").value==x ) {
+                
+         // alert("I got it!");
+                guess= true;
+            } else{
+                 guesses++;
+             //alert("I did not get it.");
+            }
      }
-
-     console.log(myArray);
-            document.getElementById("arrayitems").innerHTML=Array1;
-     
-
+    
+     alert("Guesses:"+ guesses);
+  }
      </script>
     
 </body>
