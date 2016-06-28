@@ -15,15 +15,30 @@
    
   
   
+  <p>What is the weather?</p>
+  <input id="weather" />
+  
+  <button id="myButton">Submit</button>
+  
+  
+  
   <script type="text/javascript">
   
   
-     var x = 1;
-     if (x==1){
-         
-         alert("x is 1!");
-     }
-   
+     document.getElementById("myButton").onclick  = function  (){
+      
+      var x = document.getElementById("weather").value;
+  if(x>= 75)
+  {
+      
+      alert("eww is hot!");
+      
+  }
+  else{
+      
+      alert("is all good");
+  }
+  }
      </script>
     
 </body>
