@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+    <title>My First Website</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css">
+        
+        div{
+                width:100px;
+                height:100px;
+                float:left;
+                margin:20px;
+            
+        }   
+    
+      #red{
+          
+          background-color: red;
+    
+          border-radius: 50px;
+          
+      }
+      
+      #blue{
+          
+          background-color: blue;
+          
+          border-radius: 50px;
+      }
+      
+      #green{
+          
+          background-color: green;
+        
+          border-radius: 50px;
+      }
+      
+      #purple{
+          
+          background-color: purple;
+         
+          border-radius: 50px;
+      }
+      
+      #brown{
+          
+          background-color: brown;
+               border-radius: 50px;
+          
+      }
+     #clicks{
+        
+         font-style: bold;
+         font-size: 2em;
+         
+      }
+    
+    </style>    
+</head>
+<body>
+    
+    <p>Number of Clicks <span id="clicks"> </span></p>
+
+    </br>
+        <div id="red"  >
+            
+        </div>
+        
+        <div id="blue">  </div>
+        
+        <div id="green"></div>
+        
+        <div id="purple"> </div>
+        
+        <div id="brown"></div>
+
+
+ <script type="text/javascript">
+
+    var red = document.getElementById("red");
+    var blue = document.getElementById("blue");
+    var green = document.getElementById("green");
+    var purple = document.getElementById("purple");
+    var brown = document.getElementById("brown");
+
+
+
+
+  var numberOfClicks =0;
+  //red.style.cursor= 'pointer';
+
+    
+  
+  red.onclick = function(){
+
+       this.id= "purple";
+       numberOfClicks++;
+        if(numberOfClicks > 5 ){
+           this.style.backgroundColor= "white";
+           
+       }
+     if(numberOfClicks > 9 )
+       {
+           reset();
+       }
+      document.getElementById("clicks").innerHTML = numberOfClicks;
+  };
+  blue.onclick = function(){
+     
+      // this.style.backgroundColor= "white";
+       this.id= "green";
+       numberOfClicks++;
+        if(numberOfClicks >9 ){
+           this.style.backgroundColor= "white";
+           
+       }
+      if(numberOfClicks > 9 )
+       {
+           reset();
+       }
+       document.getElementById("clicks").innerHTML = numberOfClicks;
+  };
+  green.onclick = function(){
+        this.id= "blue";
+      // this.style.backgroundColor= "white";
+       numberOfClicks++;
+        if(numberOfClicks > 5 ){
+           this.style.backgroundColor= "white";
+           
+       }
+      if(numberOfClicks > 9 )
+       {
+           reset();
+       }
+       document.getElementById("clicks").innerHTML = numberOfClicks;
+  };
+
+purple.onclick = function(){
+       
+       this.id= "red";
+       numberOfClicks++;
+       if(numberOfClicks > 5 ){
+           this.style.backgroundColor= "white";
+           
+       }
+      if(numberOfClicks > 9 )
+       {
+           reset();
+       }
+       document.getElementById("clicks").innerHTML = numberOfClicks;
+  };
+brown.onclick = function(){
+
+       this.style.backgroundColor= "white";
+        numberOfClicks++;
+         if(numberOfClicks > 5 ){
+           this.style.backgroundColor= "brown";
+           
+       }
+    if(numberOfClicks > 9 )
+       {
+           reset();
+       }
+        document.getElementById("clicks").innerHTML = numberOfClicks;
+  };
+
+function reset () {
+
+
+        //document.getElementById("clicks").innerHTML = "Game Over";
+  location.reload ();
+  //numberOfClicks  = 0
+  //document.getElementById("clicks").innerHTML = "Reset";
+};
+</script>
+
+
+</body>
+</html>
